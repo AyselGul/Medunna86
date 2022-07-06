@@ -41,5 +41,9 @@ Feature: US 05
 
     Examples:
     |RegSSN|RegFirstname|RegLastname|Regusername|Regemail|RegNewpassword|RegNewpassword confirmation|
+<<<<<<< HEAD:target/test-classes/features/uiFeatures/US-05_AyselTC-7RegistrationPage.feature
     | 140-53-2345     |Mehmet      |Khann      |Meh-7      |edkhlr@gmail.com|Meh72- |Meh72- |
+=======
+    | 190-53-7860     |Mehmet      |Khann      |Meh-7      |khnnn@gmail.com|Meh72? |Meh72? |
+>>>>>>> c46f3be229b5521e027397a386524e6c25e30299:target/test-classes/features/UIFeatures/US-05_AyselTC-7RegistrationPage.feature
 

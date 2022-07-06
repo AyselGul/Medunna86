@@ -1,18 +1,26 @@
+<<<<<<< HEAD
 //
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
 
+=======
+>>>>>>> master
 package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Arrays;
 
+<<<<<<< HEAD
 @JsonIgnoreProperties(
         ignoreUnknown = true)
 public class AyselPojos {
 
+=======
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class AyselPojos {
+>>>>>>> master
     private String firstName;
     private String lastName;
     private String ssn;
@@ -20,10 +28,114 @@ public class AyselPojos {
     private String langKey;
     private String password;
     private String email;
+<<<<<<< HEAD
+=======
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+>>>>>>> master
     private String phoneNumber;
     private int id;
     private String date;
     private boolean activated;
+<<<<<<< HEAD
+=======
+    private String [] authorities;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getLangKey() {
+        return langKey;
+    }
+
+    public void setLangKey(String langKey) {
+        this.langKey = langKey;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public boolean isActivated() {
+        return activated;
+    }
+
+    public void setActivated(boolean activated) {
+        this.activated = activated;
+    }
+
+    public String[] getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(String[] authorities) {
+        this.authorities = authorities;
+    }
+>>>>>>> master
 
     @Override
     public String toString() {
@@ -42,6 +154,7 @@ public class AyselPojos {
                 ", authorities=" + Arrays.toString(authorities) +
                 '}';
     }
+<<<<<<< HEAD
 
     private String[] authorities;
 
@@ -141,3 +254,6 @@ public class AyselPojos {
         this.authorities = authorities;
     }
 }
+=======
+}
+>>>>>>> master

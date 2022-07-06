@@ -6,10 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class AyselPage {
-
     public AyselPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+
 
     @FindBy(xpath = "//a[@class='appointment-btn scrollto']")
     public WebElement HMmakeanAppointmentWebelement;
@@ -60,6 +61,7 @@ public class AyselPage {
     @FindBy(xpath = "//button[@id='register-submit']//span[contains(text(),'Register')]")
     public WebElement RegRegisterButton;
 
+<<<<<<< HEAD
     @FindBy(xpath = "//span[text()='Register']")
     public WebElement dropdownRegisterButton;
 
@@ -71,16 +73,75 @@ public class AyselPage {
 
   @FindBy(xpath = "//span[normalize-space()='Register']")
   public WebElement IconRegistrationWebelement;
+=======
+    @FindBy(xpath = "//input[@id='username']")
+    public WebElement signinUsernameBox;
 
-  @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
-  public WebElement AppointmentToastContainerMassage;
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement signinPasswordBox;
 
- @FindBy(xpath = "//span[text()='Create a new Appointment']")
-  public WebElement createaNewAppointmentButton;
+    @FindBy(xpath = "//button[@type='submit']//span[contains(text(),'Sign in')]")
+    public WebElement signinSigninButton;
+
+
+    @FindBy(xpath = "//a[@class='dropdown-item active']")
+    public WebElement dropdownRegisterButton;
+
+    @FindBy(xpath = "//a[@id='login-item']")
+    public WebElement dropdownSigninButton;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+    public WebElement DropdownRegistrationButton;
+
+    @FindBy(xpath = "//div[text()='Your SSN is required.']")
+    public WebElement cautionRegSSN;
+
+
+    @FindBy(xpath = "//div[@class='jh-card card']")
+    public WebElement appoinmentRequestTable;
+
+    @FindBy (xpath = "//span[normalize-space()='Items&Titles']")
+    public WebElement itemsandtitleButton;
+
+
+    @FindBy (xpath = "//div[normalize-space()='Registration Saved']")
+    public WebElement registrationSavedToastContainer;
+
+    @FindBy (xpath = "//div[@class='modal-content']")
+    public WebElement modalContentDropTable;
+
+
+    @FindBy (xpath = "//input[@id='username']")
+    public WebElement dropTableUsernameBox;
+
+    @FindBy (xpath = "//input[@id='password']")
+    public WebElement dropTablePasswordBox;
+
+    @FindBy (xpath = "//button[@type='submit']//span[contains(text(),'Sign in')]")
+    public WebElement dropTableSigninBox;
+
+    @FindBy (xpath = "//span[normalize-space()='Registration']")
+    public WebElement RegistarionText;
+
+
+    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+    public WebElement ItemsAndTitleDropdown4;
+
+    @FindBy(xpath = "//span[normalize-space()='Register']")
+    public WebElement IconRegistrationWebelement;
+>>>>>>> master
+
+    @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    public WebElement AppointmentToastContainerMassage;
+
+    @FindBy(xpath = "//span[text()='Create a new Appointment']")
+    public WebElement createaNewAppointmentButton;
+
 
     @FindBy(xpath = "//div[normalize-space()='Your LastName is required.']")
     public WebElement cautionLastnameText;
 
+<<<<<<< HEAD
    @FindBy(xpath = "//div[normalize-space()='Your SSN is required.']")
    public WebElement cautionSSNText;
 
@@ -136,11 +197,30 @@ public class AyselPage {
     //
     //@FindBy(xpath = "//div[@class='invalid-feedback']")
     //public WebElement invalidUsernameText;
+=======
+    @FindBy(xpath = "//div[normalize-space()='Your SSN is required.']")
+    public WebElement cautionSSNText;
 
+    @FindBy(xpath = "//div[text()='Your email is required.']")
+    public WebElement cautionEmailText;
+>>>>>>> master
 
+    @FindBy(xpath = "//div[text()='Phone number is required.']")
+    public WebElement cautionPhoneText;
+
+<<<<<<< HEAD
     @FindBy (xpath = "//div[@class='modal-content']")
     public WebElement modalContentDropTable;
+=======
+    //@FindBy(xpath = "//span[text()='Registration']")
+    //public WebElement RegistrationText;
+//
+    //@FindBy(xpath = "//span[text()='Create a new Appointment']")
+    //public WebElement createaNewAppointmentButton;
+>>>>>>> master
 
+    //@FindBy(xpath = "//span[text()='Create a new Appointment']")
+    //public WebElement createaNewAppointmentButton;
 
     @FindBy (xpath = "//input[@id='username']")
     public WebElement dropTableUsernameBox;

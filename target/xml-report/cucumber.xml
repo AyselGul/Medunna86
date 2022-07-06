@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.305">
-    <testcase classname="Testing the Appiontment data" name="TC Appoinment" time="0.07">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user(patient) send get Request for their data.........................undefined
-Then user(patient) deserialize their data jo Java...........................skipped
-And user(patient) save the data to related file and validate................skipped
-]]></failure>
-    </testcase>
-</testsuite>

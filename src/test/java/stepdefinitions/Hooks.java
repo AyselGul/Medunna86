@@ -3,6 +3,9 @@ package stepdefinitions;
         import io.cucumber.java.After;
         import io.cucumber.java.Before;
         import io.cucumber.java.Scenario;
+        import io.restassured.builder.RequestSpecBuilder;
+        import io.restassured.specification.RequestSpecification;
+        import utilities.ConfigReader;
         import utilities.Driver;
 
         import java.io.IOException;
@@ -16,7 +19,7 @@ public class Hooks {
 //    -I designed my hooks. It takes screenshot when a test scenario fails.
 
 
-
+    public static RequestSpecification spec;
 
     @Before(order=1, value="@PasswordEdit")
     public void navigateLoginPage() {
@@ -24,6 +27,12 @@ public class Hooks {
 
 
     }
+
+    @Before(order=3, value="@APIAppoinment")
+    public void generateApiToken() {
+        spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("medunna_base_url")).build();
+    }
+
 
     @Before(order=3, value="@UIregistration")
     public void beforeRegistration() {

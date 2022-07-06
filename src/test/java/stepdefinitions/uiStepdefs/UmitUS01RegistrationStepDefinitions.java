@@ -7,7 +7,7 @@ import org.junit.Assert;
 import pages.UmitPage;
 import pojos.UmitRegistrantPojos;
 import utilities.Driver;
-import static utilities.TxtWriter.saveUIRegistrantData;
+
 
 public class UmitUS01RegistrationStepDefinitions {
 
@@ -66,6 +66,6 @@ public class UmitUS01RegistrationStepDefinitions {
     public void user_registers_and_saves_the_records() {
         Driver.waitAndClick(registrationPage.registerButton);
         Assert.assertTrue(registrationPage.successMessageTextContainer.isDisplayed());
-        saveUIRegistrantData(registrant);
+
     }
 }

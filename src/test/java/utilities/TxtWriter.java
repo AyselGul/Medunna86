@@ -1,12 +1,6 @@
 package utilities;
-<<<<<<< HEAD
-
 
 import pojos.AyselPojos;
-=======
-import pojos.UmitRegistrantPojos;
-import pojos.pojos.AyselPojos;
->>>>>>> master
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -25,13 +19,12 @@ public class TxtWriter {
         }
     }
 
-<<<<<<< HEAD
 
-    public static void saveAPIAppoinmentData(AyselPojos [] ayselPojoss){   // Multiple users
+    public static void saveAPIAppoinmentData(AyselPojos [] ayselPojoss) {   // Multiple users
 
         try {
-            FileWriter fw = new FileWriter(ConfigReader.getProperty("appoinments_api_data"),true);
-            BufferedWriter bw= new BufferedWriter(fw);
+            FileWriter fw = new FileWriter(ConfigReader.getProperty("appoinments_api_data"), true);
+            BufferedWriter bw = new BufferedWriter(fw);
 
             for (int i = 0; i < ayselPojoss.length; i++) {
                 bw.append(ayselPojoss[i].toString() + "\n");
@@ -39,32 +32,11 @@ public class TxtWriter {
             }
             bw.close();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
-=======
-    public static void saveUIRegistrantData(UmitRegistrantPojos registrant) {
-
-        try {
-            FileWriter fw = new FileWriter(ConfigReader.getProperty("applicant_data"), true);
-
-            // file creation
-            // location + fileName + txt
-
-            BufferedWriter bw = new BufferedWriter(fw);
-
-            bw.append(registrant.toString() + "\n");
-            bw.close();
-
-        }catch (Exception e) {
-            e.printStackTrace();
-
-        }
 
     }
->>>>>>> master
-}
-
 
     }

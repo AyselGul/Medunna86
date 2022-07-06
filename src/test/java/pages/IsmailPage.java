@@ -1,14 +1,6 @@
 package pages;
 
-<<<<<<< HEAD
-public class IsmailPage {
 
-    // test
-    //test2
-    //test3
-    //test4
-    //test5
-=======
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -124,5 +116,5 @@ public class IsmailPage {
 
 
 
->>>>>>> c46f3be229b5521e027397a386524e6c25e30299
+
 }

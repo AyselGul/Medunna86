@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.uiStepdefs;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -11,6 +11,8 @@ import utilities.*;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static utilities.TxtWriter.saveUIAppoinmentData;
 
 public class AyselUIstepDefinitions {
 
@@ -500,7 +502,7 @@ public class AyselUIstepDefinitions {
         Driver.waitAndClick(ay.RegRegisterButton);
     }
 
-<<<<<<<< HEAD:src/test/java/stepdefinitions/uiStepdefs/AyselUIstepDefinitions.java
+
     @Then("user\\(patient) click on Signin button")
     public void userPatientClickOnSigninButton() {
         Driver.waitAndClick(ay.SigninButton);
@@ -569,8 +571,7 @@ public class AyselUIstepDefinitions {
     public void userPatientRegisterAndSaveTheProvidedData() {
         saveUIAppoinmentData(ayp);
     }
-========
->>>>>>>> master:src/test/java/stepdefinitions/Ayselstepdefinitions.java
+
 }
 
 

@@ -4,7 +4,6 @@ Feature: US 05
     Given user(patient) navigate to 'Medunna' homepage
     Then user(patient) navigate to icon, verify it is seen,clickable and click the icon
     Then user(patient) click on Register button
-    #Given user(patient) navigate to 'Medunna Registration' homepage
     Then user(patient) verify the text 'Registration'is visible
 
 
@@ -39,12 +38,8 @@ Feature: US 05
     And user(patient) register and save the provided data
 
 
-
     Examples:
     |RegSSN|RegFirstname|RegLastname|Regusername|Regemail|RegNewpassword|RegNewpassword confirmation|
-<<<<<<< HEAD:src/test/resources/features/UIFeatures/US05_AyselTC-7RegistrationPage.feature
     | 100-23-0942     |Mars      |jupiter.     |MamC      |mars@gmail.com|Mars72? |Mars72? |
-=======
-    | 140-53-2345     |Mehmet      |Khann      |Meh-7      |edkhlr@gmail.com|Meh72- |Meh72- |
->>>>>>> master:src/test/resources/features/UIFeatures/US-05_AyselTC-7RegistrationPage.feature
+
 

@@ -8,10 +8,12 @@ import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+
 import pojos.AyselPojos;
 import utilities.ConfigReader;
 
 import static org.junit.Assert.assertTrue;
+import static utilities.Authentication.generateToken;
 import static utilities.TxtWriter.saveAPIAppoinmentData;
 
 public class AyselAPIstepDefinitions {
@@ -64,5 +66,6 @@ public class AyselAPIstepDefinitions {
     @And("user\\(patient) save the data to related file and validate")
     public void userPatientSaveTheDataToRelatedFileAndValidate() {
         saveAPIAppoinmentData(ayselPojoss);
+        generateToken();
     }
 }

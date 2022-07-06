@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.612">
+    <testcase classname="Testing the Appiontment data" name="TC 01 Appoinment" time="3.377">
+        <system-out><![CDATA[Given user(patient) send get Request for their data.........................passed
+Then user(patient) deserialize their data jo Java...........................passed
+And user(patient) save the data to related file and validate................passed
+]]></system-out>
+    </testcase>
+</testsuite>

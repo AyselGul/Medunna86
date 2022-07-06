@@ -1,6 +1,8 @@
 package utilities;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 import java.util.HashMap;
@@ -26,15 +28,16 @@ public class Authentication {
         Map<String, Object> expectedData = new HashMap<>();
         expectedData.put("username", "teamadmin86");
         expectedData.put("password", "teamadmin86");
-        expectedData.put("rememberMe", true);
+        expectedData.put("rememberme", true);
 
 
-        Response response = given().spec(spec).when().post("/{first}/{second}");
+        Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().post("/{first}/{second}");
 
         response.prettyPrint();
 
+        JsonPath json = response.jsonPath();
 
-        return "";
+        return json.getString("id_token");
     }
 
 

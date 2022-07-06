@@ -1,0 +1,76 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-07-06T22:35:10.854Z",
+        "before": [
+          {
+            "result": {
+              "duration": 507280600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.generateApiToken()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "TC 01 Appoinment",
+        "description": "",
+        "id": "testing-the-appiontment-data;tc-01-appoinment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2618312600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user(patient) send get Request for their data",
+            "match": {
+              "location": "stepdefinitions.apiStepdefs.AyselAPIstepDefinitions.user_patient_send_get_request_for_their_data()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 129151600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user(patient) deserialize their data jo Java",
+            "match": {
+              "location": "stepdefinitions.apiStepdefs.AyselAPIstepDefinitions.user_patient_deserialize_their_data_jo_java()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 42045700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user(patient) save the data to related file and validate",
+            "match": {
+              "location": "stepdefinitions.apiStepdefs.AyselAPIstepDefinitions.userPatientSaveTheDataToRelatedFileAndValidate()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@APIAppoinment"
+          }
+        ]
+      }
+    ],
+    "name": "Testing the Appiontment data",
+    "description": "",
+    "id": "testing-the-appiontment-data",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/apiFeatures/AppoinmentAPIFeature.feature",
+    "tags": []
+  }
+]

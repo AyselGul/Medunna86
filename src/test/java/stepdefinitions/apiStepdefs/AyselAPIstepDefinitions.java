@@ -23,12 +23,15 @@ public class AyselAPIstepDefinitions {
 
     @Given("user\\(patient) send get Request for their data")
     public void user_patient_send_get_request_for_their_data() {
+
+
         response = RestAssured.given().headers("Authorization",
-                        "Bearer " + ConfigReader.getProperty("apiToken"),
+                        "Bearer " +generateToken(),
                         "Content-Type", ContentType.JSON,
                         "Accept", ContentType.JSON).
                 when().
                 get(ConfigReader.getProperty("usersAPIUrl"));
+
         // response.prettyPrint();
 
     }
@@ -66,6 +69,6 @@ public class AyselAPIstepDefinitions {
     @And("user\\(patient) save the data to related file and validate")
     public void userPatientSaveTheDataToRelatedFileAndValidate() {
         saveAPIAppoinmentData(ayselPojoss);
-        generateToken();
+
     }
 }

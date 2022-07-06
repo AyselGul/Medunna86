@@ -4,7 +4,6 @@ Feature: US 05
     Given user(patient) navigate to 'Medunna' homepage
     Then user(patient) navigate to icon, verify it is seen,clickable and click the icon
     Then user(patient) click on Register button
-    #Given user(patient) navigate to 'Medunna Registration' homepage
     Then user(patient) verify the text 'Registration'is visible
 
 

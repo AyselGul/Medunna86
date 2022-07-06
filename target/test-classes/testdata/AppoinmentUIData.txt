@@ -1,0 +1,3 @@
+AyselPojos{firstName='null', lastName='null', ssn='null', login='null', langKey='null', password='null', email='null', phoneNumber='null', id=0, date='null', activated=false, authorities=null}
+AyselPojos{firstName='null', lastName='null', ssn='null', login='null', langKey='null', password='null', email='null', phoneNumber='null', id=0, date='null', activated=false, authorities=null}
+AyselPojos{firstName='null', lastName='null', ssn='null', password='null', email='null', phoneNumber='null'}

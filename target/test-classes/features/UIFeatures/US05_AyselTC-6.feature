@@ -8,7 +8,7 @@ Feature: US 05
   @UIappointment
   Scenario Outline:  Test01: Make an appoinment - Verify Button,Appoinment Date  cannot be chosen past dates
 
-
+    Then user(patient) confirm Appoinment Request table is visible
     And   user(patient) verify First name textbox is empty
     Then  user (patient) click textbox and enter their "<Firstname>"
    # Then user(patient) verify Fist name textbox is full
@@ -29,7 +29,7 @@ Feature: US 05
     Then user(patient) verify the appointment date is up-to-date
     And user(patient) click Send an Appoinment Request
     And user(patient) verify toast container message Appointment Registration Saved
-    Then user(patient) navigate to icon, verifyit is seen,clickable and click the icon
+    Then user(patient) navigate to icon, verify it is seen,clickable and click the icon
     Then user(patient) click on Register button
 
 

@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-07-05T22:19:01.861Z",
+        "line": 3,
+        "name": "TC Appoinment",
+        "description": "",
+        "id": "testing-the-appiontment-data;tc-appoinment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "user(patient) send get Request for their data",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "user(patient) deserialize their data jo Java",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user(patient) save the data to related file and validate",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@APIAppoinment"
+          }
+        ]
+      }
+    ],
+    "name": "Testing the Appiontment data",
+    "description": "",
+    "id": "testing-the-appiontment-data",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/apiFeatures/AppoinmentAPIFeature.feature",
+    "tags": []
+  }
+]

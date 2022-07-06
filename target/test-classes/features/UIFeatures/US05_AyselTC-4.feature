@@ -8,7 +8,7 @@ Feature: US 05
   @UIappointment
   Scenario Outline:  Test01: Make an appoinment - Verify Button,Email textbox cannot be empty
 
-
+    Then user(patient) confirm Appoinment Request table is visible
     And   user(patient) verify First name textbox is empty
     Then  user (patient) click textbox and enter their "<Firstname>"
     Then user(patient) verify Fist name textbox is full

@@ -2,7 +2,7 @@ Feature: US 05
   Background: User go to Registration Page
 
     Given user(patient) navigate to 'Medunna' homepage
-    Then user(patient) navigate to icon, verifyit is seen,clickable and click the icon
+    Then user(patient) navigate to icon, verify it is seen,clickable and click the icon
     Then user(patient) click on Register button
     #Given user(patient) navigate to 'Medunna Registration' homepage
     Then user(patient) verify the text 'Registration'is visible
@@ -36,10 +36,11 @@ Feature: US 05
     And   user(patient) verify RegNewpassword confirmation number is provided
     Then  user(patient) click on Registration button
     And  user(patient) verify Registration saved text is seen
+    And user(patient) register and save the provided data
 
 
 
     Examples:
     |RegSSN|RegFirstname|RegLastname|Regusername|Regemail|RegNewpassword|RegNewpassword confirmation|
-    | 190-53-7860     |Mehmet      |Khann      |Meh-7      |khnnn@gmail.com|Meh72? |Meh72? |
+    | 100-23-0942     |Mars      |jupiter.     |MamC      |mars@gmail.com|Mars72? |Mars72? |
 

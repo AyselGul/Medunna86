@@ -8,7 +8,7 @@ Background: User go to Application Page
 @UIappointment
   Scenario Outline:  Test01: Make an appoinment - Verify Button, First Name cannot be blank
 
-
+     Then user(patient) confirm Appoinment Request table is visible
      And   user(patient) verify First name textbox is empty
      And   user (patient) verify Last name textbox is blank
      And   user(patient) click Last name textbox and enter  "<Lastname>"
@@ -26,6 +26,7 @@ Background: User go to Application Page
       And user(patient) verify Phone textbox is not clean
      And user(patient) verify if the appoinment date is valid
      Then user(patient) click on Send an Appoinment Request button
+  And user(patient) will see Your FirstName is required.
 
 
   Examples:

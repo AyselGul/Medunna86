@@ -7,12 +7,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.AyselPage;
-import pojos.pojos.AyselPojos;
+import pojos.AyselPojos;
 import utilities.*;
 
 import static utilities.TxtWriter.saveUIAppoinmentData;
 
-public class Ayselstepdefinitions {
+public class AyselUIstepDefinitions {
 
     AyselPage ay = new AyselPage();
     AyselPojos ayp = new AyselPojos();
@@ -53,8 +53,8 @@ public class Ayselstepdefinitions {
     @Then("user \\(patient) click textbox and enter their {string}")
     public void userPatientClickTextboxAndEnterTheir(String firstname) {
         Driver.wait(1);
-        // ay.HMfirstnameBox.click();
-       // firstname= faker.name().firstName();
+
+        firstname= faker.name().firstName();
         Driver.waitAndSendText(ay.HMfirstnameBox,firstname);
          ayp.setFirstName(firstname);
     }
@@ -73,8 +73,8 @@ public class Ayselstepdefinitions {
     @And("user\\(patient) click Last name textbox and enter  {string}")
     public void userPatientClickTextboxAndEnter(String Lastname) {
         ReusableMethods.waitFor(1);
-       // ay.HMlastnameBox.click();
-       // Lastname= faker.name().lastName();
+
+       Lastname= faker.name().lastName();
         Driver.waitAndSendText(ay.HMlastnameBox,Lastname);
          ayp.setFirstName(Lastname);
 
@@ -91,11 +91,11 @@ public class Ayselstepdefinitions {
 
     @Then("user \\(patient) click textbox and enter ssn number {string}")
     public void userPatientClickTextboxAndEnterSsnNumber(String ssn) {
-        ReusableMethods.waitFor(2);
-        //ssn= faker.idNumber().ssnValid();
+        ReusableMethods.waitFor(1);
+       ssn= faker.idNumber().ssnValid();
         Driver.waitAndSendText(ay.HMSSNbox,ssn);
         ayp.setSsn(ssn);
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitFor(1);
 
     }
 
@@ -114,7 +114,7 @@ public class Ayselstepdefinitions {
     @Then("user\\(patient) write {string}")
     public void userPatientWrite(String email) {
         Driver.wait(1);
-        //email= faker.internet().emailAddress();
+        email= faker.internet().emailAddress();
         Driver.waitAndSendText(ay.HMemailbox,email);
         ayp.setEmail(email);
 
@@ -133,8 +133,8 @@ public class Ayselstepdefinitions {
     }
     @Then("user \\(patient) click Phone textbox and write valid {string}")
     public void userPatientClickPhoneTextboxAndWriteValid(String phoneNumber) {
-       // ay.HMphonenumberbox.click();
-        //phoneNumber= faker.phoneNumber().cellPhone();
+
+        phoneNumber= faker.phoneNumber().cellPhone();
         Driver.waitAndSendText(ay.HMphonenumberbox,phoneNumber);
         ayp.setPhoneNumber(phoneNumber);
     }
@@ -345,7 +345,7 @@ public class Ayselstepdefinitions {
         Assert.assertTrue(ay.AppointmentToastContainerMassage.isDisplayed());
     }
 
-    @Then("user\\(patient) navigate to icon, verifyit is seen,clickable and click the icon")
+    @Then("user\\(patient) navigate to icon, verify it is seen,clickable and click the icon")
     public void userPatientNavigateToIconVerifyitIsSeenClickableAndClickTheIcon() {
         Assert.assertTrue(ay.iconButton.isDisplayed());
         Assert.assertTrue(ay.iconButton.isEnabled());
@@ -511,6 +511,75 @@ public class Ayselstepdefinitions {
     @Then("user\\(patient) click on Registration button")
     public void userPatientClickOnRegistrationButton() {
         Driver.waitAndClick(ay.RegRegisterButton);
+    }
+
+    @Then("user\\(patient) click on Signin button")
+    public void userPatientClickOnSigninButton() {
+        Driver.waitAndClick(ay.SigninButton);
+    }
+
+    @And("user\\(patient) verify drop table is visible")
+    public void userPatientVerifyDropTableIsVisible() {
+        Assert.assertFalse(ay.modalContentDropTable.isDisplayed());
+    }
+
+    @Then("user \\(patient) verify username textbox is blank")
+    public void userPatientVerifyUsernameTextboxIsBlank() {
+        Driver.wait(1);
+        Assert.assertTrue(ay.dropTableUsernameBox.isDisplayed());
+    }
+
+    @And("user\\(patient) click and write their {string}")
+    public void userPatientClickAndWriteTheir(String username) {
+        ay.dropTableUsernameBox.click();
+        Driver.waitAndSendText(ay.dropTableUsernameBox,username);
+    }
+
+    @And("user \\(patient) verify username textbox is not blank")
+    public void userPatientVerifyUsernameTextboxIsNotBlank() {
+        Assert.assertTrue(ay.dropTableUsernameBox.isDisplayed());
+    }
+
+    @Then("user \\(patient) verify password textbox is blank")
+    public void userPatientVerifyPasswordTextboxIsBlank() {
+        Assert.assertTrue(ay.dropTablePasswordBox.getText().isEmpty());
+    }
+
+    @And("user\\(patient) click and enter their {string}")
+    public void userPatientClickAndEnterTheir(String password) {
+        ay.dropTablePasswordBox.click();
+        Driver.waitAndSendText(ay.dropTablePasswordBox,password);
+    }
+
+    @And("user \\(patient) verify password textbox is not empty")
+    public void userPatientVerifyPasswordTextboxIsNotEmpty() {
+        Driver.wait(1);
+        Assert.assertTrue(ay.dropTablePasswordBox.isDisplayed());
+    }
+
+    @And("user\\(patient) will see Your FirstName is required.")
+    public void userPatientWillSeeYourFirstNameIsRequired() {
+        Assert.assertTrue(ay.cautionFirstName.isDisplayed());
+    }
+
+    @And("user\\(patient) press Signin button")
+    public void userPatientPressSigninButton() {
+        Driver.waitAndClick(ay.signinSigninButton);
+    }
+
+    @Then("user \\(patient) confirm Username cannot be empty!")
+    public void userPatientConfirmUsernameCannotBeEmpty() {
+        Assert.assertTrue(ay.invalidUsernameText.isDisplayed());
+    }
+
+    @Then("user\\(patient) confirm Appoinment Request table is visible")
+    public void userPatientConfirmAppoinmentRequestTableIsVisible() {
+        Assert.assertTrue(ay.appoinmentRequestTable.isDisplayed());
+    }
+
+    @And("user\\(patient) register and save the provided data")
+    public void userPatientRegisterAndSaveTheProvidedData() {
+        saveUIAppoinmentData(ayp);
     }
 }
 
